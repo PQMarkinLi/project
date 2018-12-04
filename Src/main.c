@@ -166,6 +166,7 @@ int main(void)
   /* ��ȡBUSID */
 
   bus_id = get_id();
+  ;;
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
