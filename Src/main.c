@@ -187,6 +187,7 @@ int main(void)
 		else
 		{
 			down_state = 1;
+      ;;;
 		}
 		down_led_dec();
 		up_led_dec();
