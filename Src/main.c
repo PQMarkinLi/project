@@ -175,9 +175,9 @@ int main(void)
 		if(HAL_GPIO_ReadPin(KEY_UP_LED_GPIO_Port,KEY_UP_LED_Pin) != GPIO_PIN_RESET)
 		{
 			up_state = 0;
-		}
+		} 
 		else
-		{
+		{ 
 			up_state = 1;
 		}
 		if(HAL_GPIO_ReadPin(KEY_DOWN_LED_GPIO_Port,KEY_DOWN_LED_Pin) != GPIO_PIN_RESET)
