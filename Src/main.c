@@ -138,13 +138,13 @@ int main(void)
 	// Tout = IWDG_PRESCALER_256 * rlr /32
 	//8 S
 	IWDG_init(IWDG_PRESCALER_64,1000);
-  /* ³õÊ¼»¯°´¼ü */
-  //NCÎª¸ß
+  /* ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+  //NCÎªï¿½ï¿½
   KEY_DOWN_NC_L;KEY_UP_NC_L;
   KEY_DOWN_NO_L;KEY_UP_NO_L;
 
 
-// ¿ªÆô¶¨Ê±Æ÷2
+// ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½2
 	
 	HAL_TIM_Base_Start_IT(&htim2);
 	__HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
@@ -163,13 +163,13 @@ int main(void)
 	pre_down_led_state = down_led_state;
   while (1)
   {
-  /* »ñÈ¡BUSID */
+  /* ï¿½ï¿½È¡BUSID */
 
   bus_id = get_id();
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-  //LED io¼ì²â
+  //LED ioï¿½ï¿½ï¿½
 
 		IWDG_Feed();
 		if(HAL_GPIO_ReadPin(KEY_UP_LED_GPIO_Port,KEY_UP_LED_Pin) != GPIO_PIN_RESET)
@@ -191,58 +191,6 @@ int main(void)
 		down_led_dec();
 		up_led_dec();
 
-//    if( ( HAL_GPIO_ReadPin(LED_UP_GPIO_Port,LED_UP_Pin) )!= GPIO_PIN_RESET ) 
-//      up_h_times++;
-//    else
-//      up_l_times++;
-//    if( (HAL_GPIO_ReadPin(LED_DOWN_GPIO_Port,LED_DOWN_Pin)) != GPIO_PIN_RESET )
-//      down_h_times++;
-//    else
-//      down_l_times++;
-//    if((down_h_times+down_l_times)>30)
-//    {
-//      if((down_l_times > 10)&&(down_h_times > 10))
-//      {
-//        running_state = ARRIVED;
-//				running_state_down = ARRIVED;
-//      }
-//      else if(down_l_times!=0 && down_h_times == 0)
-//      {
-//        running_state = RUNNING;
-//				running_state_down = RUNNING;
-//      }
-//      else if(down_l_times ==0 && down_h_times != 0)
-//      {
-//        running_state =  STATIC;
-//				running_state_down = STATIC;
-//      }
-//      down_l_times = 0;
-//      down_h_times = 0;
-//    }
-//    if((up_h_times+up_l_times)>30)
-//		{
-//				if( (up_l_times >1)&&(up_h_times>1))
-//        {
-//          //ÉÁË¸×´Ì¬
-//          running_state = ARRIVED;
-//					running_state_up = ARRIVED;
-//        }
-//        else if(up_l_times!=0 && up_h_times == 0)
-//        {
-//          //µÍµçÆ½×´Ì¬
-//          running_state = RUNNING;
-//					running_state_up = RUNNING;
-
-//        }
-//        else if(up_l_times ==0 && up_h_times != 0)
-//        {
-//          //¸ßµçÆ½×´Ì¬
-//          running_state = STATIC ;
-//					running_state_up = STATIC;
-//        }
-//      up_l_times =	0;
-//      up_h_times = 0;						
-//		}
 
  //if(running_state_up == STATIC || running_state_down == STATIC )
   {
@@ -250,7 +198,7 @@ int main(void)
 		{
 			if( HAL_GPIO_ReadPin(KEY_DOWN_LED_GPIO_Port,KEY_DOWN_LED_Pin) != GPIO_PIN_RESET )		
 			{
-				//°´ÏÂ°´¼ü
+				//ï¿½ï¿½ï¿½Â°ï¿½ï¿½ï¿½
 				{
 					KEY_DOWN_NO_H;
 					time_ms = 0;
@@ -261,7 +209,7 @@ int main(void)
 		{
 			if( HAL_GPIO_ReadPin(KEY_UP_LED_GPIO_Port,KEY_UP_LED_Pin) != GPIO_PIN_RESET )		
 				{
-					//°´ÏÂ°´¼ü
+					//ï¿½ï¿½ï¿½Â°ï¿½ï¿½ï¿½
 					{
 						KEY_UP_NO_H;
 						time_ms = 0;
